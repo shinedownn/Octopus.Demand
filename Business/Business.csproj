@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="5.1.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+
+	  </PackageReference>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.3.3" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.3" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Refit" Version="6.0.94" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.8.*" />
+	  <PackageReference Include="Steeltoe.Discovery.Consul" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fakes\Handlers\Authorizations\" />
+    <Folder Include="Fakes\Handlers\Translates\" />
+    <Folder Include="Handlers\Contacts\Commands\" />
+    <Folder Include="Handlers\Contacts\ValidationRules\" />
+    <Folder Include="Handlers\ErcanProduct\CallCenters\Commands\" />
+    <Folder Include="Handlers\ErcanProduct\Contact\Commands\" />
+    <Folder Include="Handlers\ErcanProduct\Hotel\Commands\" />
+    <Folder Include="Handlers\ErcanProduct\NumberRange\Commands\" />
+    <Folder Include="Handlers\ErcanProduct\Tour\Commands\" />
+    <Folder Include="Handlers\ErcanProduct\TourPeriods\Commands\" />
+    <Folder Include="Handlers\HotelsFromElasticSearch\Commands\" />
+    <Folder Include="Handlers\RequestChannels\ValidationRules\" />
+    <Folder Include="Services\Authentication\Model\" />
+  </ItemGroup>
+
+</Project>

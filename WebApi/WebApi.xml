@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:WebAPI.Attributes.AuthorizeRolesAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Attributes.AuthorizeRolesAttribute.#ctor(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="roles"></param>
+        </member>
+        <member name="T:WebAPI.Controllers.ActionsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.GetAll">
+            <summary>
+             Get All Actions
+            </summary>
+            <remarks>Action</remarks>
+            <return>ActionDto</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.GetById(System.Int32)">
+            <summary>
+             Get Action By Id
+            </summary>
+            <remarks>Action</remarks>
+            <return>ActionDto</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.GetByType(Business.Handlers.Actions.Enums.ActionTypeEnum,System.Boolean)">
+            <summary>
+             Get Action By Type
+            </summary>
+            <remarks>Action</remarks>
+            <return>ActionDto</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.Add(Business.Handlers.Actions.Commands.CreateActionCommand)">
+            <summary>
+            Create Action
+            </summary>
+            <param name="createActionCommand"></param>
+            <returns>Result Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.Update(Business.Handlers.Actions.Commands.UpdateActionCommand)">
+            <summary>
+             Update Action
+            </summary>
+            <remarks>Action</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.ActionsController.Delete(System.Int32)">
+            <summary>
+             Delete Action
+            </summary>
+            <remarks>Action</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="T:WebAPI.Controllers.BaseApiController">
+            <summary>
+            Base controller
+            </summary>
+        </member>
+        <member name="P:WebAPI.Controllers.BaseApiController.Mediator">
+            <summary>
+            It is for getting the Mediator instance creation process from the base controller.
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Success``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Success``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Created``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Created``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.NoContent``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.NoContent``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.BadRequest``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.BadRequest``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Unauthorized``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Unauthorized``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Forbidden``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Forbidden``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.NotFound``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.NotFound``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Error``1(System.String,System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="message"></param>
+             <param name="internalMessage"></param>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BaseApiController.Error``1(Core.Utilities.Results.ApiResult{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="data"></param>
+             <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.DemandsController">
+            <summary>
+            If controller methods will not be Authorize, [AllowAnonymous] is used.
+            </summary>
+             
+        </member>
+        <member name="M:WebAPI.Controllers.DemandsController.GetById(System.Int32)">
+            <summary>
+            Get Demand By Id
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="mainDemandId">Main Demand Id</param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DemandsController.Add(Business.Handlers.Demands.Commands.CreateDemandCommand)">
+            <summary>
+            Add Demand
+            </summary>
+            <remarks>Demands</remarks> 
+            <param name="createDemandCommand">DemandsDto</param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DemandsController.Update(Business.Handlers.Demands.Commands.UpdateDemandCommand)">
+            <summary>
+            Update Demand
+            </summary>
+            <param name="updateDemandCommand">UpdateDemandCommand</param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DemandsController.Upsert(Business.Handlers.Demands.Commands.UpsertDemandCommand)">
+            <summary>
+            Upsert Demand
+            </summary>
+            <param name="upsertDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DemandsController.Delete(System.Int32)">
+            <summary>
+            Delete Demand
+            </summary>
+            <param name="mainDemandId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.DepartmentsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.DepartmentsController.getDepartments">
+            <summary>
+            Get Departments
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.DepartmentsController.getById(System.Int32)">
+            <summary>
+            Get Department By Id
+            </summary>
+            <param name="departmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DepartmentsController.Add(Business.Handlers.Departments.Commands.CreateDepartmentCommand)">
+            <summary>
+            Add Department
+            </summary>
+            <param name="createDepartmentCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DepartmentsController.Add(Business.Handlers.Departments.Commands.UpdateDepartmentCommand)">
+            <summary>
+            Update Department
+            </summary>
+            <param name="updateDepartmentCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.DepartmentsController.Delete(Business.Handlers.Departments.Commands.DeleteDepartmentCommand)">
+            <summary>
+            Add Department
+            </summary>
+            <param name="deleteDepartmentCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.FgsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.FgsController.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{WebAPI.Hubs.FgsHub})">
+            <summary>
+            
+            </summary>
+            <param name="hubContext"></param>
+            <param name="contactService"></param>
+        </member>
+        <member name="M:WebAPI.Controllers.FgsController.inComingCall(WebAPI.Models.FGSIncomingModel)">
+            <summary>
+            catches incoming call from FGS (Vodafone)
+            socket uri : url + /WebAPI/fgshub/
+            </summary> 
+        </member>
+        <member name="T:WebAPI.Controllers.HotelController">
+            <summary>
+            If controller methods will not be Authorize, [AllowAnonymous] is used.
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelController.HotelSearchAutoComplete(System.String)">
+            <summary>
+            List of Hotel Names
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.HotelController.getHotelIdByProductId(System.Int32)">
+            <summary>
+            Get HotelId By ProductId
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelController.getPermaLinkByHotelId(System.Int32)">
+            <summary>
+            Get PermaLink By HotelId
+            </summary>
+            <param name="hotelId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.HotelDemandActionsController">
+            <summary>
+            Define Actions for Hotel Demand
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandActionsController.GetById(System.Int32)">
+            <summary>
+            Get Hotel Action By Id
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="hotelDemandActionId"></param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandActionsController.GetByHotelDemandId(System.Int32)">
+            <summary>
+            Get Hotel Actions 
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandActionsController.Add(Business.Handlers.HotelDemandActions.Commands.CreateHotelDemandActionCommand)">
+            <summary>
+            Add Hotel Action
+            </summary>
+            <param name="createHotelActionCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandActionsController.Update(Business.Handlers.HotelDemandActions.Commands.UpdateHotelDemandActionCommand)">
+            <summary>
+            Update Hotel Action
+            </summary>
+            <param name="updateHotelDemandActionCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandActionsController.Delete(System.Int32)">
+            <summary>
+            Delete Hotel Action
+            </summary>
+            <param name="actionId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.HotelDemandOnRequestController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandOnRequestController.GetById(System.Int32)">
+            <summary>
+             Get Hotel Demand OnRequest By Id
+            </summary>
+            <remarks>HotelDemandOnRequest</remarks>
+            <return>HotelDemandOnRequestDto</return>
+            <response code="200">HotelDemandOnRequestDto</response>  
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandOnRequestController.GetByHotelDemandId(System.Int32)">
+            <summary>
+             Get Hotel Demand OnRequests By HotelDemandId
+            </summary>
+            <remarks>HotelDemandOnRequests</remarks>
+            <return>List of HotelDemandOnRequestDto</return>
+            <response code="200">List of HotelDemandOnRequestDto</response>  
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandOnRequestController.Add(Business.Handlers.HotelDemandOnRequests.Commands.CreateHotelDemandOnRequestCommand)">
+            <summary>
+            Create HotelDemandOnRequest
+            </summary>
+            <param name="createHotelDemandOnRequestCommand"></param>
+            <returns>Result Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandOnRequestController.Update(Business.Handlers.HotelDemandOnRequests.Commands.UpdateHotelDemandOnRequestCommand)">
+            <summary>
+             Update HotelDemandOnRequest
+            </summary>
+            <remarks>Action</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandOnRequestController.Delete(System.Int32)">
+            <summary>
+             Delete HotelDemandOnRequest
+            </summary>
+            <remarks>HotelDemandOnRequest</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="T:WebAPI.Controllers.HotelDemandsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandsController.GetById(System.Int32)">
+            <summary>
+             Get Hotel Demand By Id
+            </summary>
+            <remarks>Demands</remarks>
+            <return>Demand List</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandsController.Add(Business.Handlers.HotelDemands.Commands.CreateHotelDemandCommand)">
+            <summary>
+            Add Hotel Demand.
+            </summary>
+            <param name="createHotelDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandsController.Update(Business.Handlers.HotelDemands.Commands.UpdateHotelDemandCommand)">
+            <summary>
+            Update Demand.
+            </summary>
+            <param name="updateHotelDemandCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.HotelDemandsController.Delete(System.Int32)">
+            <summary>
+            Delete Demand.
+            </summary>
+            <param name="hotelDemandId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.MainDemandActionsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandActionsController.GetById(System.Int32)">
+            <summary>
+            Get Main Demand Action By Id
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="actionId"></param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandActionsController.GetByMainDemandId(System.Int32)">
+            <summary>
+            Get Main Demand Actions By MainDemandId
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="mainDemandId"></param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandActionsController.Update(Business.Handlers.MainDemandActions.Commands.CreateMainDemandActionCommand)">
+            <summary>
+            Create Main Demand Action
+            </summary>
+            <param name="createMainDemandActionCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandActionsController.Update(Business.Handlers.MainDemandActions.Commands.UpdateMainDemandActionCommand)">
+            <summary>
+            Update Main Demand Action
+            </summary>
+            <param name="updateMainDemandActionCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandActionsController.Delete(System.Int32)">
+            <summary>
+            Delete Action Item
+            </summary>
+            <param name="actionId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.MainDemandsController">
+            <summary>
+            Demands If controller methods will not be Authorize, [AllowAnonymous] is used.
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandsController.GetAll(System.Boolean)">
+            <summary>
+            List Main Demands
+            </summary>
+            <remarks>Demands</remarks>
+            <return>List Demands</return>
+            <response code="200"></response>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandsController.GetById(System.Int32)">
+            <summary>
+             Get Main Demand By Id
+            </summary>
+            <remarks>MainDemandDto</remarks>
+            <return>MainDemandDto</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandsController.Add(Business.Handlers.Demands.Commands.CreateMainDemandCommand)">
+            <summary>
+            Add Main Demand.
+            </summary>
+            <param name="createMainDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandsController.Update(Business.Handlers.Demands.Commands.UpdateMainDemandCommand)">
+            <summary>
+            Update Main Demand.
+            </summary>
+            <param name="updateMainDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MainDemandsController.Delete(System.Int32)">
+            <summary>
+            Delete Main Demand.
+            </summary>
+            <param name="mainDemandId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.OnRequestApprovementsController">
+            <summary>
+            OnRequestApprovements If controller methods will not be Authorize, [AllowAnonymous] is used.
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.GetList">
+            <summary>
+            List OnRequestApprovements
+            </summary>
+            <remarks>OnRequestApprovements</remarks>
+            <return>List OnRequestApprovements</return>
+            <response code="200"></response>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.GetById(System.Int32)">
+            <summary>
+            It brings the details according to its id.
+            </summary>
+            <remarks>OnRequestApprovements</remarks>
+            <return>OnRequestApprovements List</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.GetByOnRequestId(System.Int32)">
+            <summary>
+            Get Approvement By OnRequestId
+            </summary>
+            <param name="onRequestId"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.Add(Business.Handlers.OnRequestApprovements.Commands.CreateOnRequestApprovementCommand)">
+            <summary>
+            Add OnRequestApprovement.
+            </summary>
+            <param name="createOnRequestApprovement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.Update(Business.Handlers.OnRequestApprovements.Commands.UpdateOnRequestApprovementCommand)">
+            <summary>
+            Update OnRequestApprovement.
+            </summary>
+            <param name="updateOnRequestApprovement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestApprovementsController.Delete(Business.Handlers.OnRequestApprovements.Commands.DeleteOnRequestApprovementCommand)">
+            <summary>
+            Delete OnRequestApprovement.
+            </summary>
+            <param name="deleteOnRequestApprovement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.OnRequestsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestsController.GetAll">
+            <summary>
+            Get OnRequests
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response> 
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestsController.GetById(System.Int32)">
+            <summary>
+            Get OnRequest By Id
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="onRequestId"></param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestsController.Add(Business.Handlers.OnRequests.Commands.CreateOnRequestCommand)">
+            <summary>
+            Add OnRequest
+            </summary>
+            <param name="createOnRequestCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestsController.Update(Business.Handlers.OnRequests.Commands.UpdateOnRequestCommand)">
+            <summary>
+            Update OnRequest 
+            </summary>
+            <param name="updateOnRequestCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OnRequestsController.Delete(System.Int32)">
+            <summary>
+            Delete OnRequest 
+            </summary>
+            <param name="onRequestId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.RemindersController">
+            <summary>
+            Reminders If controller methods will not be Authorize, [AllowAnonymous] is used.
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.GetList">
+            <summary>
+            List Reminders
+            </summary>
+            <remarks>Reminders</remarks>
+            <return>List Reminders</return>
+            <response code="200"></response>
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.GetById(System.Int32)">
+            <summary>
+            It brings the details according to its id.
+            </summary>
+            <remarks>Reminders</remarks>
+            <return>Reminders List</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.GetMyReminders(System.Boolean)">
+            <summary>
+            It brings the details according to its id.
+            </summary>
+            <remarks>Reminders</remarks>
+            <return>Reminders List</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.Add(Business.Handlers.Reminders.Commands.CreateReminderCommand)">
+            <summary>
+            Add Reminder.
+            </summary>
+            <param name="createReminder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.Update(Business.Handlers.Reminders.Commands.UpdateReminderCommand)">
+            <summary>
+            Update Reminder.
+            </summary>
+            <param name="updateReminder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.RemindersController.Delete(Business.Handlers.Reminders.Commands.DeleteReminderCommand)">
+            <summary>
+            Delete Reminder.
+            </summary>
+            <param name="deleteReminder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.RequestChannelController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.RequestChannelController.GetAll">
+            <summary>
+             Get All Request Channels
+            </summary>
+            <remarks>RequestChannelDto</remarks>
+            <return>List of RequestChannelDto</return>
+            <response code="200"></response>  
+        </member>
+        <member name="T:WebAPI.Controllers.SearchController">
+            <summary>
+            
+            </summary> 
+        </member>
+        <member name="M:WebAPI.Controllers.SearchController.Index(Business.Handlers.Searchs.Queries.GetDemandsSearchQuery)">
+            <summary>
+            Search Main Demand
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.SearchController.GetOnRequests(Business.Handlers.Searchs.Queries.GetOnRequestsSearchQuery)">
+            <summary>
+            Search On Requests
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.SearchController.GetOnRequestsByDepartment(Business.Handlers.Searchs.Queries.GetOnRequestsSearchByDepartmentQuery)">
+            <summary>
+            Search On Requests
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.SearchController.GetMainDemandByContactId(Business.Handlers.Searchs.Queries.GetDemandsSearchByContactIdQuery)">
+            <summary>
+            Search Main Demand By ContactId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.SearchController.GetOnRequestsByContactId(Business.Handlers.Searchs.Queries.GetOnRequestsSearchByContactIdQuery)">
+            <summary>
+            Search On Requests By ContactId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Controllers.TourController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.TourController.HotelSearchAutoComplete(System.String)">
+            <summary>
+            List of Tour Names
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.TourController.getPermaLinkByTourId(System.Int32)">
+            <summary>
+            Get Tour Permalink
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:WebAPI.Controllers.TourController.getTourIdByProductId(System.Int32)">
+            <summary>
+            Get TourId By ProductId
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourController.getTourPeriods(System.Int32)">
+            <summary>
+            Get Tour Periods By ProductId
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="T:WebAPI.Controllers.TourDemandActionsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandActionsController.GetById(System.Int32)">
+            <summary>
+            Get Tour Action By Id
+            </summary>
+            <remarks>Demands</remarks> 
+            <response code="200"></response>
+            <param name="actionId"></param>
+            <returns>Demand</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandActionsController.GetAll(System.Int32)">
+            <summary>
+            Get Tour Actions 
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandActionsController.Add(Business.Handlers.TourDemandActions.Commands.CreateTourDemandActionCommand)">
+            <summary>
+            Create Actions 
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandActionsController.Update(Business.Handlers.TourDemandActions.Commands.UpdateTourDemandActionCommand)">
+            <summary>
+            Update Action Item
+            </summary>
+            <param name="updateTourDemandActionCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandActionsController.Delete(System.Int32)">
+            <summary>
+            Delete Action Item
+            </summary>
+            <param name="TourActionId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.Controllers.TourDemandOnRequestController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandOnRequestController.GetById(System.Int32)">
+            <summary>
+             Get Tour Demand OnRequest By Id
+            </summary>
+            <remarks>TourDemandOnRequest</remarks>
+            <return>TourDemandOnRequestDto</return>
+            <response code="200">TourDemandOnRequestDto</response>  
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandOnRequestController.GetByTourDemandId(System.Int32)">
+            <summary>
+             Get Tour Demand OnRequests By TourDemandId
+            </summary>
+            <remarks>TourDemandOnRequests</remarks>
+            <return>List of TourDemandOnRequestDto</return>
+            <response code="200">List of TourDemandOnRequestDto</response>  
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandOnRequestController.Add(Business.Handlers.TourDemandOnRequests.Commands.CreateTourDemandOnRequestCommand)">
+            <summary>
+            Create TourDemandOnRequest
+            </summary>
+            <param name="createTourDemandOnRequestCommand"></param>
+            <returns>Result Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandOnRequestController.Update(Business.Handlers.TourDemandOnRequests.Commands.UpdateTourDemandOnRequestCommand)">
+            <summary>
+             Update TourDemandOnRequest
+            </summary>
+            <remarks>Action</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandOnRequestController.Delete(System.Int32)">
+            <summary>
+             Delete TourDemandOnRequest
+            </summary>
+            <remarks>TourDemandOnRequest</remarks>
+            <return>Result Message</return>
+            <response code="200"></response>  
+        </member>
+        <member name="T:WebAPI.Controllers.TourDemandsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandsController.GetById(System.Int32)">
+            <summary>
+             Get Tour Demand By Id
+            </summary> 
+            <return>Tour Demand</return>
+            <response code="200"></response>  
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandsController.GetByMainDemandId(System.Int32)">
+            <summary>
+            Get Tour Demands By MainDemandId
+            </summary>
+            <param name="mainDemandId"></param>
+            <returns>Tour Demands List</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandsController.Add(Business.Handlers.TourDemands.Commands.CreateTourDemandCommand)">
+            <summary>
+            Add Tour Demand.
+            </summary>
+            <param name="createTourDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandsController.Update(Business.Handlers.TourDemands.Commands.UpdateTourDemandCommand)">
+            <summary>
+            Update Tour Demand.
+            </summary>
+            <param name="updateTourDemandCommand"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.TourDemandsController.Delete(System.Int32)">
+            <summary>
+            Delete Tour Demand.
+            </summary>
+            <param name="tourDemandId"></param>
+            <returns>Response Message</returns>
+        </member>
+        <member name="T:WebAPI.EntityBaseOverride.OverrideBase">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:WebAPI.EntityBaseOverride.OverrideBase.#ctor(Microsoft.EntityFrameworkCore.Design.IAnnotationCodeGenerator,Microsoft.EntityFrameworkCore.Design.ICSharpHelper)">
+             <summary>
+            
+             </summary>
+             <param name="annotationCodeGenerator"></param>
+             <param name="cSharpHelper"></param>
+        </member>
+        <member name="M:WebAPI.EntityBaseOverride.OverrideBase.WriteCode(Microsoft.EntityFrameworkCore.Metadata.IEntityType,System.String,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="entityType"></param>
+             <param name="namespace"></param>
+             <param name="useDataAnnotations"></param>
+             <returns></returns>
+        </member>
+        <member name="T:WebAPI.EntityBaseOverride.ServiceInjection">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:WebAPI.EntityBaseOverride.ServiceInjection.ConfigureDesignTimeServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+             <summary>
+            
+             </summary>
+             <param name="serviceCollection"></param>
+        </member>
+        <member name="T:WebAPI.Hubs.FgsHub">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Hubs.FgsHub.OnConnectedAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Hubs.FgsHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.Program">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:WebAPI.Program.Main(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:WebAPI.Program.CreateHostBuilder(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <returns></returns>
+        </member>
+        <member name="T:WebAPI.Roles.DemandRoles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebAPI.Startup">
+             <summary>
+            
+             </summary>
+             
+        </member>
+        <member name="M:WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Hosting.IHostEnvironment)">
+             <summary>
+            
+             </summary>
+             <param name="configuration"></param>
+             <param name="hostEnvironment"></param>
+        </member>
+        <member name="M:WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <remarks>
+            It is common to all configurations and must be called. Aspnet core does not call this method because there are other methods.
+            </remarks>
+            <param name="services"></param>
+        </member>
+        <member name="M:WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param> 
+        </member>
+    </members>
+</doc>

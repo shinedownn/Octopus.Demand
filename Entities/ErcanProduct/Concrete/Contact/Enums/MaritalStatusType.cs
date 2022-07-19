@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.ErcanProduct.Concrete.Enums
+{
+    public enum MaritalStatusType
+    {
+        Bekar = 1,
+        Evli = 2,
+    }
+}
